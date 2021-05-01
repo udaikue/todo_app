@@ -9,7 +9,7 @@
 <body>
 <div id="app">
   <h1>ToDo リスト</h1>
-  <div v-for="(todo, n) in todos">
+  <div v-for="(todo, n) in todos" :key="todo.n">
     <p>
       <span class="todo">{{ todo }}</span>
       <button @click="editTodo(n)">編集</button>
