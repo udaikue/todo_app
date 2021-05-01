@@ -21,17 +21,16 @@ new Vue({
       if (!this.newTodo) {
         return
       }
-      this.todos.push(this.newTodo)
-      this.newTodo = ''
 
       if (!isNaN(this.editNumber)) {
-        this.removeTodo(this.editNumber)
+        this.todos[this.editNumber] = this.newTodo
         this.editNumber = 'editNumber'
-        location.reload()
       }
       else {
-        this.saveTodo()
+        this.todos.push(this.newTodo)
       }
+      this.saveTodo()
+      this.newTodo = ''
     },
 
     removeTodo(x) {
@@ -45,8 +44,8 @@ new Vue({
     },
 
     saveTodo() {
-      const parsed = JSON.stringify(this.todos)
-      localStorage.setItem('todos', parsed)
+      const saveJson = JSON.stringify(this.todos)
+      localStorage.setItem('todos', saveJson)
     }
   }
 })
