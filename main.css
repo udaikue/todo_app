@@ -1,0 +1,17 @@
+#app {
+    max-width: 640px;
+    margin: 0 auto;
+}
+body {
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+    color: #696969;
+}
+button {
+    border: none;
+    border-radius: 20px;
+    line-height: 24px;
+    padding: 0 8px;
+    background: #5f9ea0;
+    color: #fff;
+    cursor: pointer;
+}
